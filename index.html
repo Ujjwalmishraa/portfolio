@@ -4,23 +4,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ujjwal Mishra - Portfolio</title>
-
-  <!-- Main CSS -->
   <link rel="stylesheet" href="./style.css" />
-
-  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 </head>
 <body>
 
-  <!-- Navbar -->
   <nav id="navbar">
     <div class="nav-container">
       <div class="logo">UM Portfolio</div>
       <ul class="nav-menu" id="navMenu">
         <li><a href="#home" class="nav-link active">Home</a></li>
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#skills" class="nav-link">Skills</a></li>
         <li><a href="#projects" class="nav-link">Projects</a></li>
         <li><a href="#resume" class="nav-link">Resume</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
@@ -31,125 +24,78 @@
     </div>
   </nav>
 
-  <!-- Home -->
   <section id="home" class="section home-section">
     <div class="container">
       <div class="home-content">
         <div class="profile-image">
-          <img src="./ujjwal.png" alt="Ujjwal Mishra" />
+          <img src="ujjwal.png" alt="Ujjwal Mishra" />
         </div>
         <h1>Ujjwal Mishra</h1>
         <h2>Web Developer | Cloud & DevOps Learner</h2>
         <p>
-          I am an MCA student passionate about web development and modern cloud technologies.
-          Currently learning Cloud Computing and DevOps concepts, working with AWS, Linux, Git, and CI/CD.
+          MCA student passionate about Web Development, Cloud & DevOps.  
+          Working with AWS, Linux, Git & CI/CD.
         </p>
-        <a href="https://www.linkedin.com/in/ujjwal-mishra--" target="_blank" rel="noopener noreferrer" class="btn">
-          Get In Touch
-        </a>
+        <a href="https://www.linkedin.com/in/ujjwal-mishra--" target="_blank" class="btn">Get In Touch</a>
       </div>
     </div>
   </section>
 
-  <!-- About -->
-  <section id="about" class="section about-section">
-    <div class="container">
-      <h2 class="section-title">About Me</h2>
-      <p>
-        I am currently pursuing MCA and building real-world web projects. My goal is to start my career in Cloud Computing or DevOps
-        and contribute to scalable, reliable applications.
-      </p>
-    </div>
-  </section>
-
-  <!-- Skills -->
-  <section id="skills" class="section skills-section">
-    <div class="container">
-      <h2 class="section-title">Skills</h2>
-      <ul class="skills-list">
-        <li>HTML, CSS, JavaScript</li>
-        <li>AWS, Linux</li>
-        <li>Git & GitHub</li>
-        <li>DevOps Fundamentals</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Projects -->
   <section id="projects" class="section projects-section">
     <div class="container">
       <h2 class="section-title">Projects</h2>
       <div class="projects-grid">
-
         <div class="project-card">
           <h3>EduQuiz</h3>
           <p>Online quiz management system using PHP & MySQL.</p>
-          <a href="https://github.com/Ujjwalmishraa/quiz_management" target="_blank" class="btn btn-secondary">Source Code</a>
+          <a href="https://github.com/Ujjwalmishraa/quiz_management" target="_blank" class="btn">Source Code</a>
         </div>
-
         <div class="project-card">
           <h3>Movie Critic</h3>
-          <p>Movie review platform with user ratings.</p>
-          <a href="https://github.com/Ujjwalmishraa/movie_critic" target="_blank" class="btn btn-secondary">Source Code</a>
+          <p>Movie review platform with ratings.</p>
+          <a href="https://github.com/Ujjwalmishraa/movie_critic" target="_blank" class="btn">Source Code</a>
         </div>
-
         <div class="project-card">
           <h3>Currency Converter</h3>
           <p>Live currency converter using Flask API.</p>
-          <a href="https://github.com/Ujjwalmishraa/currency-converter" target="_blank" class="btn btn-secondary">Source Code</a>
+          <a href="https://github.com/Ujjwalmishraa/currency-converter" target="_blank" class="btn">Source Code</a>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- Resume -->
   <section id="resume" class="section resume-section">
     <div class="container">
       <h2 class="section-title">Resume</h2>
-      <div class="resume-buttons">
-        <a href="./Ujjwal_mishra_Resume.pdf" target="_blank" class="btn btn-primary">View Resume</a>
-        <a href="./Ujjwal_mishra_Resume.pdf" download class="btn btn-secondary">Download Resume</a>
-      </div>
+      <a href="Ujjwal_mishra_Resume.pdf" target="_blank" class="btn">View Resume</a>
+      <a href="Ujjwal_mishra_Resume.pdf" download class="btn">Download Resume</a>
     </div>
   </section>
 
-  <!-- Contact -->
   <section id="contact" class="section contact-section">
     <div class="container">
       <h2 class="section-title">Contact Me</h2>
 
-      <!-- Replace FORM ACTION with your Formspree endpoint -->
-      <form 
-        id="contactForm" 
-        class="contact-form-container"
-        action="https://formspree.io/f/xxxxabcd" 
-        method="POST"
-      >
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="your.email@example.com" required />
-        <textarea name="message" rows="5" placeholder="Your message here..." required></textarea>
-        <button type="submit" class="btn btn-submit">Send Message</button>
+      <div id="successMessage" class="success-message hidden">Message sent successfully!</div>
+      <div id="errorMessage" class="success-message hidden error">Failed to send message.</div>
+
+      <form id="contactForm" class="contact-form-container">
+        <input type="text" id="name" name="name" placeholder="Your Name" required />
+        <input type="email" id="email" name="email" placeholder="your.email@example.com" required />
+        <textarea id="message" name="message" rows="5" placeholder="Your message here..." required></textarea>
+        <button type="submit" class="btn">Send Message</button>
       </form>
     </div>
   </section>
 
-  <!-- Footer -->
   <footer class="footer">
-    <div class="container">
-      <p>&copy; 2026 Ujjwal Mishra. All rights reserved.</p>
-      <div class="social-links">
-        <a href="https://www.linkedin.com/in/ujjwal-mishra--" target="_blank" aria-label="LinkedIn">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="https://github.com/Ujjwalmishraa" target="_blank" aria-label="GitHub">
-          <i class="fab fa-github"></i>
-        </a>
-      </div>
+    <p>&copy; 2026 Ujjwal Mishra</p>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/ujjwal-mishra--" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://github.com/Ujjwalmishraa" target="_blank"><i class="fab fa-github"></i></a>
     </div>
   </footer>
 
-  <!-- JS -->
-  <script src="./script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>

@@ -9,11 +9,14 @@
 </head>
 <body>
 
+  <!-- NAVBAR -->
   <nav id="navbar">
     <div class="nav-container">
       <div class="logo">UM Portfolio</div>
       <ul class="nav-menu" id="navMenu">
         <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
         <li><a href="#projects" class="nav-link">Projects</a></li>
         <li><a href="#resume" class="nav-link">Resume</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
@@ -24,6 +27,7 @@
     </div>
   </nav>
 
+  <!-- HOME -->
   <section id="home" class="section home-section">
     <div class="container">
       <div class="home-content">
@@ -41,58 +45,128 @@
     </div>
   </section>
 
-  <section id="projects" class="section projects-section">
+  <!-- ABOUT -->
+  <section id="about" class="section about-section">
     <div class="container">
-      <h2 class="section-title">Projects</h2>
-      <div class="projects-grid">
-        <div class="project-card">
-          <h3>EduQuiz</h3>
-          <p>Online quiz management system using PHP & MySQL.</p>
-          <a href="https://github.com/Ujjwalmishraa/quiz_management" target="_blank" class="btn">Source Code</a>
-        </div>
-        <div class="project-card">
-          <h3>Movie Critic</h3>
-          <p>Movie review platform with ratings.</p>
-          <a href="https://github.com/Ujjwalmishraa/movie_critic" target="_blank" class="btn">Source Code</a>
-        </div>
-        <div class="project-card">
-          <h3>Currency Converter</h3>
-          <p>Live currency converter using Flask API.</p>
-          <a href="https://github.com/Ujjwalmishraa/currency-converter" target="_blank" class="btn">Source Code</a>
+      <h2 class="section-title">About Me</h2>
+      <div class="about-content">
+        <p>
+          I am currently pursuing MCA and building real-world projects in web development.
+          I enjoy creating interactive user experiences and learning cloud technologies.
+        </p>
+        <p>
+          My interests include AWS, Linux, Git, CI/CD pipelines, and DevOps practices.
+        </p>
+
+        <div class="career-objective">
+          <h3>Career Objective</h3>
+          <p>
+            To start my career as a Cloud / DevOps Engineer and contribute to scalable systems
+            while continuously improving my technical skills.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- SKILLS -->
+  <section id="skills" class="section skills-section">
+    <div class="container">
+      <h2 class="section-title">Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <div class="skill-header">
+            <span class="skill-name">HTML & CSS</span>
+            <span class="skill-percentage">85%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-progress" style="width:85%"></div></div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-header">
+            <span class="skill-name">JavaScript</span>
+            <span class="skill-percentage">75%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-progress" style="width:75%"></div></div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-header">
+            <span class="skill-name">AWS Basics</span>
+            <span class="skill-percentage">60%</span>
+          </div>
+          <div class="skill-bar"><div class="skill-progress" style="width:60%"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section projects-section">
+    <div class="container">
+      <h2 class="section-title">Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <div class="project-content">
+            <h3>EduQuiz</h3>
+            <p>Online quiz management system using PHP & MySQL.</p>
+            <a href="https://github.com/Ujjwalmishraa/quiz_management" target="_blank" class="btn">Source Code</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-content">
+            <h3>Movie Critic</h3>
+            <p>Movie review platform with ratings.</p>
+            <a href="https://github.com/Ujjwalmishraa/movie_critic" target="_blank" class="btn">Source Code</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-content">
+            <h3>Currency Converter</h3>
+            <p>Live currency converter using Flask API.</p>
+            <a href="https://github.com/Ujjwalmishraa/currency-converter" target="_blank" class="btn">Source Code</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESUME -->
   <section id="resume" class="section resume-section">
     <div class="container">
       <h2 class="section-title">Resume</h2>
       <a href="Ujjwal_mishra_Resume.pdf" target="_blank" class="btn">View Resume</a>
-      <a href="Ujjwal_mishra_Resume.pdf" download class="btn">Download Resume</a>
+      <a href="Ujjwal_mishra_Resume.pdf" download class="btn btn-secondary">Download Resume</a>
     </div>
   </section>
 
+  <!-- CONTACT -->
   <section id="contact" class="section contact-section">
     <div class="container">
       <h2 class="section-title">Contact Me</h2>
 
       <div id="successMessage" class="success-message hidden">Message sent successfully!</div>
-      <div id="errorMessage" class="success-message hidden error">Failed to send message.</div>
+      <div id="errorMessage" class="success-message hidden" style="background:#f5576c">Failed to send message.</div>
 
       <form id="contactForm" class="contact-form-container">
-        <input type="text" id="name" name="name" placeholder="Your Name" required />
-        <input type="email" id="email" name="email" placeholder="your.email@example.com" required />
-        <textarea id="message" name="message" rows="5" placeholder="Your message here..." required></textarea>
-        <button type="submit" class="btn">Send Message</button>
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="your.email@example.com" required />
+        <textarea name="message" rows="5" placeholder="Your message here..." required></textarea>
+        <button type="submit" class="btn btn-submit">Send Message</button>
       </form>
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer class="footer">
-    <p>&copy; 2026 Ujjwal Mishra</p>
-    <div class="social-links">
-      <a href="https://www.linkedin.com/in/ujjwal-mishra--" target="_blank"><i class="fab fa-linkedin"></i></a>
-      <a href="https://github.com/Ujjwalmishraa" target="_blank"><i class="fab fa-github"></i></a>
+    <div class="container">
+      <p>&copy; 2026 Ujjwal Mishra</p>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/ujjwal-mishra--" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/Ujjwalmishraa" target="_blank"><i class="fab fa-github"></i></a>
+      </div>
     </div>
   </footer>
 

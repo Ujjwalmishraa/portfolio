@@ -1,10 +1,19 @@
+// Mobile menu
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.getElementById("navMenu");
+
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  navMenu.classList.toggle("active");
+});
+
+// Contact form (Formspree)
 const form = document.getElementById("contactForm");
 const successMessage = document.getElementById("successMessage");
 const errorMessage = document.getElementById("errorMessage");
 
 form.addEventListener("submit", async function (e) {
   e.preventDefault();
-
   const formData = new FormData(form);
 
   try {
@@ -18,19 +27,11 @@ form.addEventListener("submit", async function (e) {
       successMessage.classList.remove("hidden");
       errorMessage.classList.add("hidden");
       form.reset();
-      setTimeout(() => successMessage.classList.add("hidden"), 3000);
     } else {
-      throw new Error();
+      throw new Error("Failed");
     }
-  } catch {
+  } catch (err) {
     errorMessage.classList.remove("hidden");
-    setTimeout(() => errorMessage.classList.add("hidden"), 3000);
+    successMessage.classList.add("hidden");
   }
-});
-
-const hamburger = document.getElementById("hamburger");
-const navMenu = document.getElementById("navMenu");
-
-hamburger.addEventListener("click", () => {
-  navMenu.classList.toggle("active");
 });
